@@ -1,6 +1,6 @@
-[博客地址](http://maybedeng.com)
+[博客地址](https://maybedeng.github.io/)
 
-[给我留言](https://maybedeng.com/guestbook/)
+[给我留言](https://maybedeng.github.io/guestbook/)
 
 ## 浏览器支持 Browser support
 
