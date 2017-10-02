@@ -14,7 +14,7 @@ keywords: "Hexo, NexT, Neveryu, Never_yu, Blog, Node.js, Git, PHP, JAVA, JAVASCR
 rss: /atom.xml
 
 # Specify the date when the site was setup
-since: 2016
+since: 2017
 
 # Canonical, set a canonical link tag in your hexo, you could use it for your SEO of blog.
 # See: https://support.google.com/webmasters/answer/139066
@@ -124,8 +124,9 @@ font:
 # Key is the link label showing to end users.
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
 social:
-  Github: https://github.com/Neveryu
-  Weibo: http://weibo.com/Neveryu
+  Github: https://github.com/maybedeng
+  知乎: https://www.zhihu.com/people/wang-qi-wen-46
+  Email: mailto:maybedeng912@gmail.com
 
 # Social Links Icons
 # Icon Mapping:
@@ -185,9 +186,9 @@ sidebar:
 links_title: 友情链接
 #links_layout: block
 links_layout: inline
-links:
-  建站日志: /weblog
-  CSDN: http://blog.csdn.net/csdn_yudong
+#links:
+#  建站日志: /weblog
+#  CSDN: http://blog.csdn.net/csdn_yudong
 
 
 # ---------------------------------------------------------------
@@ -411,5 +412,5 @@ version: 5.0.1
 # 自己添加的功能
 # 1.开启打赏功能
 reward_comment: 满分是10分的话，这篇文章你给几分
-# alipay: /reward/reward_alipay.png
+alipay: /reward/reward_alipay.png
 wechatpay: /reward/reward_wechat.png
