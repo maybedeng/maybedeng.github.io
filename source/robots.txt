@@ -10,5 +10,5 @@ Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
 
-Sitemap: https://neveryu.github.io/sitemap.xml
-Sitemap: https://neveryu.github.io/baidusitemap.xml
+Sitemap: http://www.maybedeng.com/sitemap.xml
+Sitemap: http://www.maybedeng.com/baidusitemap.xml

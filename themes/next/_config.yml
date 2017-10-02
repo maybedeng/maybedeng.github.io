@@ -6,7 +6,7 @@
 favicon: /favicon/favicon.ico
 
 # Set default keywords (Use a comma to separate)
-keywords: "Hexo, NexT, Neveryu, Never_yu, Blog, Node.js, Git, PHP, JAVA, JAVASCRIPT, HTML, CSS, jQuery, Angular, Vue, React"
+keywords: "Maybe, Python, Data Mining"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -183,7 +183,7 @@ sidebar:
   # display: remove
 
 # Blogrolls
-links_title: 友情链接
+#links_title: 友情链接
 #links_layout: block
 links_layout: inline
 #links:
@@ -411,6 +411,6 @@ version: 5.0.1
 
 # 自己添加的功能
 # 1.开启打赏功能
-reward_comment: 满分是10分的话，这篇文章你给几分
-alipay: /reward/reward_alipay.png
-wechatpay: /reward/reward_wechat.png
+#reward_comment: 满分是10分的话，这篇文章你给几分
+#alipay: /reward/reward_alipay.png
+#wechatpay: /reward/reward_wechat.png
