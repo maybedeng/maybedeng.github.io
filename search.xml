@@ -5,7 +5,7 @@
     
     <entry>
       <title><![CDATA[polyfill — Respond.js]]></title>
-      <url>https://maybedeng.github.io/2017/02/11/respond-js/</url>
+      <url>https://www.maybedeng.com/2017/02/11/respond-js/</url>
       <content type="html"><![CDATA[<blockquote>
 <p>Respond.js 让不支持 css3 Media Query 的浏览器包括 IE6-IE8 等其他浏览器支持媒体查询。</p>
 </blockquote>
@@ -77,7 +77,7 @@
     
     <entry>
       <title><![CDATA[Sass 教程]]></title>
-      <url>https://maybedeng.github.io/2016/10/23/sass/</url>
+      <url>https://www.maybedeng.com/2016/10/23/sass/</url>
       <content type="html"><![CDATA[<p><span id="inline-blue" style="font-size:100%;border-radius:3px;">Sass</span>： (Syntactically Awesome StyleSheets)</p>
 <h1 id="sass简介"><a href="#sass简介" class="headerlink" title="sass简介"></a>sass简介</h1><p>来自于官网的简介：<br>Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.</p>
 <font color="red"> Sass 是世界上最成熟的，稳定的，功能强大的专业级 CSS 扩展语言。</font>
