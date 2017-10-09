@@ -1,0 +1,1314 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Courier New:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Git," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Maybe's Blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="What is Git?    Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.  http://en.wikipedia.org/wi">
+<meta name="keywords" content="Git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git And Version Control">
+<meta property="og:url" content="https://www.maybedeng.com/2017/10/04/Git-And-Version-Control/index.html">
+<meta property="og:site_name" content="Maybe&#39;s Blog">
+<meta property="og:description" content="What is Git?    Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.  http://en.wikipedia.org/wi">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://www.maybedeng.com/images/git1.png">
+<meta property="og:image" content="https://www.maybedeng.com/images/git2.png">
+<meta property="og:image" content="https://www.maybedeng.com/images/git3.png">
+<meta property="og:image" content="https://www.maybedeng.com/images/git4.png">
+<meta property="og:image" content="https://www.maybedeng.com/images/git5.png">
+<meta property="og:image" content="https://www.maybedeng.com/images/git6.png">
+<meta property="og:image" content="https://www.maybedeng.com/images/git7.png">
+<meta property="og:image" content="https://www.maybedeng.com/images/git8.png">
+<meta property="og:image" content="https://www.maybedeng.com/images/git9.png">
+<meta property="og:image" content="https://www.maybedeng.com/images/git10.png">
+<meta property="og:updated_time" content="2017-10-06T14:28:59.075Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Git And Version Control">
+<meta name="twitter:description" content="What is Git?    Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.  http://en.wikipedia.org/wi">
+<meta name="twitter:image" content="https://www.maybedeng.com/images/git1.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"hide"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: undefined,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="https://www.maybedeng.com/2017/10/04/Git-And-Version-Control/"/>
+
+
+<!-- 网页加载条 -->
+<script src="/js/src/pace.min.js"></script>
+  <title> Git And Version Control | Maybe's Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Maybe's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">缺怪</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-resources">
+          <a href="/resources" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-file"></i> <br />
+            
+            资料
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search fa-lg"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Git And Version Control
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-10-04T16:40:54+08:00" content="17-10">
+              17-10
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Tools/" itemprop="url" rel="index">
+                    <span itemprop="name">Tools</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/10/04/Git-And-Version-Control/" class="leancloud_visitors" data-flag-title="Git And Version Control">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+              &nbsp; | &nbsp;
+              <span class="page-pv">热度
+              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>℃
+              </span>
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <hr>
+<h1 id="What-is-Git"><a href="#What-is-Git" class="headerlink" title="What is Git?"></a>What is Git?</h1><blockquote class="blockquote-center"><br>    Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.<br></blockquote>
+
+<p><u><a href="http://en.wikipedia.org/wiki/Git" target="_blank" rel="external">http://en.wikipedia.org/wiki/Git</a></u></p>
+<a id="more"></a>
+<hr>
+<h1 id="Git-and-Version-Control-Terminology"><a href="#Git-and-Version-Control-Terminology" class="headerlink" title="Git and Version Control Terminology"></a>Git and Version Control Terminology</h1><p><img src="/images/git1.png" alt=""></p>
+<ul>
+<li><font color="red">Version Control System (VCS) or Source Code Manager (SCM):</font></li>
+<li><font color="red">Commit (snapshot):</font></li>
+<li><font color="red">Repository (Repo):</font></li>
+<li><font color="red">Working Directory:</font></li>
+<li><font color="red">Checkout:</font></li>
+<li><font color="red">Staging Area or Staging Index or Index:</font></li>
+<li><font color="red">SHA:</font></li>
+<li><font color="red">Branch:</font>
+
+</li>
+</ul>
+<p><a href="https://classroom.udacity.com/courses/ud123/lessons/1b369991-f1ca-4d6a-ba8f-e8318d76322f/concepts/5f703930-a95e-47f0-a56b-702ed3a93741" target="_blank" rel="external">Further Research</a></p>
+<hr>
+<h1 id="Windows-Setup"><a href="#Windows-Setup" class="headerlink" title="Windows Setup"></a>Windows Setup</h1><ul>
+<li>Download Git</li>
+<li><p>Configuring the Command Prompt on Windows</p>
+<ul>
+<li><p>Each commit to Git repository will be “tagged” with the username of the person who made the commit</p>
+</li>
+<li><p>Enter the following commands in Git Bash, one at a time, to set your username and email:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git config --global user.name "Your Name Here"</div><div class="line">git config --global user.email "your_email@example.com"</div><div class="line">git config --list</div></pre></td></tr></table></figure>
+</li>
+<li><p>You’ll only have to do this once, but you can always change these down the road using the same commands.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="https://classroom.udacity.com/courses/ud123/lessons/1b369991-f1ca-4d6a-ba8f-e8318d76322f/concepts/8a5af628-7a18-49cf-bbc8-02691762f862" target="_blank" rel="external">Further Research</a></p>
+<hr>
+<h1 id="Create-A-Git-Repo"><a href="#Create-A-Git-Repo" class="headerlink" title="Create A Git Repo"></a>Create A Git Repo</h1><h2 id="Create-A-Repo-From-Scratch"><a href="#Create-A-Repo-From-Scratch" class="headerlink" title="Create A Repo From Scratch"></a>Create A Repo From Scratch</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">mkdir -p udacity-git-course/new-git-project</div><div class="line">cd udacity-git-course/new-git-project</div><div class="line">git init</div></pre></td></tr></table></figure>
+<h3 id="Git-Init’s-Effect"><a href="#Git-Init’s-Effect" class="headerlink" title="Git Init’s Effect"></a>Git Init’s Effect</h3><p>Running the git init command sets up all of the necessary files and directories that Git will use to keep track of everything. All of these files are stored in a directory called .git (notice the . at the beginning - that means it’ll be a hidden directory on Mac/Linux). This .git directory is the “repo”! This is where git records all of the commits and keeps track of everything!</p>
+<p>Let’s take a brief look at the contents of the .git directory.</p>
+<blockquote>
+<p>WARNING: Don’t directly edit any files inside the .git directory. This is the heart of the repository. If you change file names and/or file content, git will probably lose track of the files that you’re keeping in the repo, and you could lose a lot of work! It’s okay to look at those files though, but don’t edit or delete them.</p>
+</blockquote>
+<p><img src="/images/git2.png" alt=""></p>
+<p><a href="https://classroom.udacity.com/courses/ud123/lessons/437a88fc-15f5-48b8-a6a5-0cf3347e6183/concepts/fa8f761a-d0a2-4be1-a5b9-60116ea4ecd1" target="_blank" rel="external">Further Research</a></p>
+<h2 id="Clone-An-Existing-Repo"><a href="#Clone-An-Existing-Repo" class="headerlink" title="Clone An Existing Repo"></a>Clone An Existing Repo</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone https://github.com/udacity/course-git-blog-project</div></pre></td></tr></table></figure>
+<p><img src="/images/git3.png" alt=""></p>
+<p><a href="https://classroom.udacity.com/courses/ud123/lessons/437a88fc-15f5-48b8-a6a5-0cf3347e6183/concepts/59082be0-c1af-4839-8ae5-0a182dc5bfe8" target="_blank" rel="external">Further Research</a></p>
+<h2 id="Determine-A-Repo’s-Status"><a href="#Determine-A-Repo’s-Status" class="headerlink" title="Determine A Repo’s Status"></a>Determine A Repo’s Status</h2><p>The <code>git status</code> is our key to the mind of Git. It will tell us what Git is thinking and the state of our repository as Git sees it. When you’re first starting out, you should be using the git status command all of the time! Seriously. You should get into the habit of running it after any other command. This will help you learn how Git works and it’ll help you from making (possibly) incorrect assumptions about the state of your files/repository.</p>
+<p><img src="/images/git4.png" alt=""></p>
+<p><a href="https://classroom.udacity.com/courses/ud123/lessons/437a88fc-15f5-48b8-a6a5-0cf3347e6183/concepts/ce648229-7d6c-4ad3-805e-af6a77f38fd0" target="_blank" rel="external">Further Research</a></p>
+<hr>
+<h1 id="Review-A-Repo’s-History"><a href="#Review-A-Repo’s-History" class="headerlink" title="Review A Repo’s History"></a>Review A Repo’s History</h1><h2 id="git-log-Recap"><a href="#git-log-Recap" class="headerlink" title="git log Recap"></a><code>git log</code> Recap</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git log</div></pre></td></tr></table></figure>
+<p>By default, this command displays:</p>
+<ul>
+<li>the SHA</li>
+<li>the author</li>
+<li>the date</li>
+<li>and the message</li>
+</ul>
+<p><img src="/images/git5.png" alt=""></p>
+<p><a href="https://classroom.udacity.com/courses/ud123/lessons/280d5ccf-6440-4d27-97d1-d9f6118359bc/concepts/ee7a6ad0-b3b6-42b4-9823-a79f7c6d0f27" target="_blank" rel="external">Further Research</a></p>
+<h2 id="git-log-oneline-Recap"><a href="#git-log-oneline-Recap" class="headerlink" title="git log --oneline  Recap"></a><code>git log --oneline</code>  Recap</h2><p>To recap, the <code>--oneline</code> flag is used to alter how git log displays information:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git log --oneline</div></pre></td></tr></table></figure>
+<p>This command:</p>
+<ul>
+<li>lists one commit per line</li>
+</ul>
+<ul>
+<li>shows the first 7 characters of the commit’s SHA</li>
+</ul>
+<ul>
+<li>shows the commit’s message</li>
+</ul>
+<p><img src="/images/git6.png" alt=""></p>
+<h2 id="git-log-stat-Recap"><a href="#git-log-stat-Recap" class="headerlink" title="git log --stat Recap"></a><code>git log --stat</code> Recap</h2><p>The <code>git log</code> command has a flag that can be used to display the files that have been changed in the commit, as well as the number of lines that have been added or deleted. The flag is <code>--stat</code> (“stat” is short for “statistics”):</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git log --stat</div></pre></td></tr></table></figure>
+<p><img src="/images/git7.png" alt=""></p>
+<h2 id="git-log-p-Recap"><a href="#git-log-p-Recap" class="headerlink" title="git log -p Recap"></a><code>git log -p</code> Recap</h2><p>To recap, the <code>-p</code> flag (which is the same as the <code>--patch</code> flag) is used to alter how git log displays information:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git log -p</div><div class="line">git log -p fdf5493</div><div class="line">git log --oneline --graph --decorate --all</div></pre></td></tr></table></figure>
+<p>This command adds the following to the default output:</p>
+<ul>
+<li>displays the files that have been modified</li>
+</ul>
+<ul>
+<li>displays the location of the lines that have been added/removed</li>
+</ul>
+<ul>
+<li>displays the actual changes that have been made</li>
+</ul>
+<p><img src="/images/git8.png" alt=""></p>
+<h2 id="git-show-Recap"><a href="#git-show-Recap" class="headerlink" title="git show Recap"></a><code>git show</code> Recap</h2><p><code>git show</code> == <code>git log -p xxxxxxx</code></p>
+<ul>
+<li><code>--stat</code></li>
+<li><code>-p</code>or<code>-patch</code></li>
+<li><code>-w</code></li>
+</ul>
+<hr>
+<h2 id="Add-Commits-To-A-Repo"><a href="#Add-Commits-To-A-Repo" class="headerlink" title="Add Commits To A Repo"></a>Add Commits To A Repo</h2><h2 id="git-add-Recap"><a href="#git-add-Recap" class="headerlink" title="git add Recap"></a><code>git add</code> Recap</h2><p>The <code>git add</code> command takes files from the Staging Index and saves them in the repository.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git add &lt;file1&gt; &lt;file2&gt; ... &lt;fileN&gt;</div></pre></td></tr></table></figure>
+<p>This command:</p>
+<ul>
+<li>takes a space-separated list of file names</li>
+</ul>
+<ul>
+<li>alternatively, the period . can be used in place of a list of files to tell Git to add the current directory (and all nested files)</li>
+</ul>
+<h2 id="git-commit-Recap"><a href="#git-commit-Recap" class="headerlink" title="git commit Recap"></a><code>git commit</code> Recap</h2><p>The <code>git commit</code> command takes files from the Staging Index and saves them in the repository.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git commit</div></pre></td></tr></table></figure>
+<p>This command:</p>
+<ul>
+<li>will open the code editor that is specified in your configuration<ul>
+<li>(check out the Git configuration step from the first lesson to configure your editor)</li>
+</ul>
+</li>
+</ul>
+<p>Inside the code editor:</p>
+<ul>
+<li>a commit message must be supplied</li>
+<li>lines that start with a # are comments and will not be recorded</li>
+<li>save the file after adding a commit message</li>
+<li>close the editor to make the commit</li>
+</ul>
+<p>Then, use <code>git log</code> to review the commit you just made!</p>
+<h2 id="git-diff-Recap"><a href="#git-diff-Recap" class="headerlink" title="git diff Recap"></a><code>git diff</code> Recap</h2><p>To recap, the <code>git diff</code> command is used to see changes that have been made but haven’t been committed, yet:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git diff</div></pre></td></tr></table></figure>
+<p>This command displays:</p>
+<ul>
+<li>the files that have been modified</li>
+</ul>
+<ul>
+<li>the location of the lines that have been added/removed</li>
+</ul>
+<ul>
+<li>the actual changes that have been made</li>
+</ul>
+<h2 id="Having-Git-Ignore-Files"><a href="#Having-Git-Ignore-Files" class="headerlink" title="Having Git Ignore Files"></a>Having Git Ignore Files</h2><p>To recap, the <code>.gitignore</code> file is used to tell Git about the files that Git should not track. This file should be placed in the same directory that the .git directory is in.</p>
+<hr>
+<h1 id="Tagging-Branching-and-Mergeing"><a href="#Tagging-Branching-and-Mergeing" class="headerlink" title="Tagging, Branching, and Mergeing"></a>Tagging, Branching, and Mergeing</h1><h2 id="Tagging"><a href="#Tagging" class="headerlink" title="Tagging"></a>Tagging</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">git tag -a v1.0</div><div class="line">git tag</div><div class="line">git log --decorate</div><div class="line">git tag -d v1.0</div><div class="line">git tag -a v1.0 a87984</div></pre></td></tr></table></figure>
+<p><a href="https://classroom.udacity.com/courses/ud123/lessons/61776182-df3f-4767-9558-5d1591c1a709/concepts/f22ea0e4-4a68-4d3a-91c8-0c19915af71f" target="_blank" rel="external">Further Research</a></p>
+<h2 id="Branching"><a href="#Branching" class="headerlink" title="Branching"></a>Branching</h2><p>The <code>git branch</code> command is used to interact with Git’s branches:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git branch</div></pre></td></tr></table></figure>
+<p>It can be used to:</p>
+<ul>
+<li>list all branch names in the repository      </li>
+</ul>
+<ul>
+<li>create new branches</li>
+</ul>
+<ul>
+<li>delete branches</li>
+</ul>
+<p><img src="/images/git9.png" alt=""></p>
+<p><a href="https://classroom.udacity.com/courses/ud123/lessons/61776182-df3f-4767-9558-5d1591c1a709/concepts/89a3a3ca-c47d-4e5f-87c7-cbc838f62232" target="_blank" rel="external">Further Research</a></p>
+<h2 id="Merging"><a href="#Merging" class="headerlink" title="Merging"></a>Merging</h2><p>To recap, the <code>git merge</code> command is used to combine branches in Git:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git merge &lt;other-branch&gt;</div></pre></td></tr></table></figure>
+<p>There are two types of merges:</p>
+<ul>
+<li>Fast-forward merge – the branch being merged in must be ahead of the checked out branch. The checked out branch’s pointer will just be moved forward to point to the same commit as the other branch.</li>
+</ul>
+<ul>
+<li>the regular type of merge<ul>
+<li>two divergent branches are combined</li>
+<li>a merge commit is created</li>
+</ul>
+</li>
+</ul>
+<p><a href="https://classroom.udacity.com/courses/ud123/lessons/61776182-df3f-4767-9558-5d1591c1a709/concepts/3a831268-c6c7-4d10-a755-37e1232a2b4c" target="_blank" rel="external">Further Research</a></p>
+<h2 id="Merge-Conflicts"><a href="#Merge-Conflicts" class="headerlink" title="Merge Conflicts"></a>Merge Conflicts</h2><p>A merge conflict happens when the same line or lines have been changed on different branches that are being merged. Git will pause mid-merge telling you that there is a conflict and will tell you in what file or files the conflict occurred. To resolve the conflict in a file:</p>
+<ul>
+<li>locate and remove all lines with merge conflict indicators</li>
+</ul>
+<ul>
+<li>determine what to keep</li>
+</ul>
+<ul>
+<li>save the file(s)</li>
+</ul>
+<ul>
+<li>stage the file(s)</li>
+</ul>
+<ul>
+<li>make a commit</li>
+</ul>
+<ul>
+<li>Be careful that a file might have merge conflicts in multiple parts of the file, so make sure you check the entire file for merge conflict indicators - a quick search for <code>&lt;&lt;&lt;</code> should help you locate all of them.</li>
+</ul>
+<p><a href="https://classroom.udacity.com/courses/ud123/lessons/61776182-df3f-4767-9558-5d1591c1a709/concepts/84037f3a-2ba6-4317-a705-4dc5f342295e" target="_blank" rel="external">Further Research</a></p>
+<hr>
+<h1 id="Undoing-Changes"><a href="#Undoing-Changes" class="headerlink" title="Undoing Changes"></a>Undoing Changes</h1><h2 id="Changing-The-Last-Commit"><a href="#Changing-The-Last-Commit" class="headerlink" title="Changing The Last Commit"></a>Changing The Last Commit</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git commit --amend</div></pre></td></tr></table></figure>
+<p>Add Forgotten Files To Commit:</p>
+<ul>
+<li>edit the file(s)</li>
+</ul>
+<ul>
+<li>save the file(s)</li>
+</ul>
+<ul>
+<li>stage the file(s)</li>
+</ul>
+<ul>
+<li>run <code>git commit --amend</code></li>
+</ul>
+<h2 id="Reverting-A-Commit"><a href="#Reverting-A-Commit" class="headerlink" title="Reverting A Commit"></a>Reverting A Commit</h2><p>To recap, the <code>git revert</code> command is used to reverse a previously made commit:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git revert &lt;SHA-of-commit-to-revert&gt;</div></pre></td></tr></table></figure>
+<p>This command:</p>
+<ul>
+<li>will undo the changes that were made by the provided commit</li>
+</ul>
+<ul>
+<li>creates a new commit to record the change</li>
+</ul>
+<p><a href="https://classroom.udacity.com/courses/ud123/lessons/f02167ad-3ba7-40e0-a157-e5320a5b0dc8/concepts/2e4b1c76-466d-494d-959c-a1f2aef5c7f7" target="_blank" rel="external">Further Research</a></p>
+<h2 id="Resetting-Commits"><a href="#Resetting-Commits" class="headerlink" title="Resetting Commits"></a>Resetting Commits</h2><h3 id="Reset-vs-Revert"><a href="#Reset-vs-Revert" class="headerlink" title="Reset vs Revert"></a>Reset vs Revert</h3><p>At first glance, resetting might seem coincidentally close to reverting, but they are actually quite different. Reverting creates a new commit that reverts or undos a previous commit. Resetting, on the other hand, <font color="red">erases commits!</font></p>
+<h3 id="The-git-reset-Command"><a href="#The-git-reset-Command" class="headerlink" title="The git reset Command"></a>The <code>git reset</code> Command</h3><p>The <code>git reset</code> command is used to reset (erase) commits:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git reset &lt;reference-to-commit&gt;</div></pre></td></tr></table></figure>
+<p>It can be used to:</p>
+<ul>
+<li>move the HEAD and current branch pointer to the referenced commit</li>
+</ul>
+<ul>
+<li>erase commits</li>
+</ul>
+<ul>
+<li>move committed changes to the staging index</li>
+</ul>
+<ul>
+<li>unstage committed changes</li>
+</ul>
+<h3 id="Git-Reset’s-Flags"><a href="#Git-Reset’s-Flags" class="headerlink" title="Git Reset’s Flags"></a>Git Reset’s Flags</h3><p>The way that Git determines if it erases, stages previously committed changes, or unstages previously committed changes is by the flag that’s used. The flags are:</p>
+<ul>
+<li>–mixed</li>
+</ul>
+<ul>
+<li>–soft</li>
+</ul>
+<ul>
+<li>–hard</li>
+</ul>
+<p>It’s easier to understand how they work with a little animation.</p>
+<p><img src="/images/git10.png" alt=""></p>
+<h3 id="Backup-Branch"><a href="#Backup-Branch" class="headerlink" title="Backup Branch"></a>Backup Branch</h3><p>Before I do any resetting, I usually create a backup branch on the most-recent commit so that I can get back to the commits if I make a mistake:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git branch backup</div></pre></td></tr></table></figure>
+<h3 id="Back-To-Normal"><a href="#Back-To-Normal" class="headerlink" title="Back To Normal"></a>Back To Normal</h3><p>If you created the backup branch prior to resetting anything, then you can easily get back to having the master branch point to the same commit as the backup branch. You’ll just need to:</p>
+<ul>
+<li>remove the uncommitted changes from the working directory</li>
+</ul>
+<ul>
+<li>merge backup into master (which will cause a Fast-forward merge and move master up to the same point as backup)</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git checkout -- index.html</div><div class="line">git merge backup</div></pre></td></tr></table></figure>
+<p><a href="https://classroom.udacity.com/courses/ud123/lessons/f02167ad-3ba7-40e0-a157-e5320a5b0dc8/concepts/fed81eb7-49b4-4129-9f6b-8201e0796fd8" target="_blank" rel="external">Further Research</a></p>
+<hr>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Git/" rel="tag"><i class="fa fa-tag"></i> Git</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/10/04/Command-Line-Basic/" rel="next" title="Linux(1)">
+                <i class="fa fa-chevron-left"></i> Linux(1)
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/10/04/Types-of-Questions/" rel="prev" title="Types of Questions">
+                Types of Questions <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    <div id="gitmentContainer" style="margin-bottom: -19px;"></div>
+    <link rel="stylesheet" href="/css/gitment.css">
+    <script src="/js/src/gitment.browser.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      var gitment = new Gitment({
+        id: 'blog-guestbook',
+        owner: 'maybedeng',
+        repo: 'maybedeng.github.io',
+        oauth: {
+          client_id: '08544bc2b81307c041a4',
+          client_secret: '38ffb2389310fa44608cac82c03368438bbd0dfe',
+        },
+      })
+      gitment.render('gitmentContainer')
+    </script>
+
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/avatar/avatar.png"
+               alt="Maybe" />
+          <p class="site-author-name" itemprop="name">Maybe</p>
+          <p class="site-description motion-element" itemprop="description">Stay Hungry,Stay Foolish</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">22</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/maybedeng" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/wang-qi-wen-46" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="mailto:maybedeng912@gmail.com" target="_blank" title="Gmail">
+                  
+                    <i class="fa fa-fw fa-envelope"></i>
+                  
+                  Gmail
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/qq_35239449" title="CSDN" target="_blank">CSDN</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#What-is-Git"><span class="nav-number">1.</span> <span class="nav-text">What is Git?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Git-and-Version-Control-Terminology"><span class="nav-number">2.</span> <span class="nav-text">Git and Version Control Terminology</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Windows-Setup"><span class="nav-number">3.</span> <span class="nav-text">Windows Setup</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Create-A-Git-Repo"><span class="nav-number">4.</span> <span class="nav-text">Create A Git Repo</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Create-A-Repo-From-Scratch"><span class="nav-number">4.1.</span> <span class="nav-text">Create A Repo From Scratch</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Git-Init’s-Effect"><span class="nav-number">4.1.1.</span> <span class="nav-text">Git Init’s Effect</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Clone-An-Existing-Repo"><span class="nav-number">4.2.</span> <span class="nav-text">Clone An Existing Repo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Determine-A-Repo’s-Status"><span class="nav-number">4.3.</span> <span class="nav-text">Determine A Repo’s Status</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Review-A-Repo’s-History"><span class="nav-number">5.</span> <span class="nav-text">Review A Repo’s History</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#git-log-Recap"><span class="nav-number">5.1.</span> <span class="nav-text">git log Recap</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-log-oneline-Recap"><span class="nav-number">5.2.</span> <span class="nav-text">git log --oneline  Recap</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-log-stat-Recap"><span class="nav-number">5.3.</span> <span class="nav-text">git log --stat Recap</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-log-p-Recap"><span class="nav-number">5.4.</span> <span class="nav-text">git log -p Recap</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-show-Recap"><span class="nav-number">5.5.</span> <span class="nav-text">git show Recap</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Add-Commits-To-A-Repo"><span class="nav-number">5.6.</span> <span class="nav-text">Add Commits To A Repo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-add-Recap"><span class="nav-number">5.7.</span> <span class="nav-text">git add Recap</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-commit-Recap"><span class="nav-number">5.8.</span> <span class="nav-text">git commit Recap</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-diff-Recap"><span class="nav-number">5.9.</span> <span class="nav-text">git diff Recap</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Having-Git-Ignore-Files"><span class="nav-number">5.10.</span> <span class="nav-text">Having Git Ignore Files</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Tagging-Branching-and-Mergeing"><span class="nav-number">6.</span> <span class="nav-text">Tagging, Branching, and Mergeing</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Tagging"><span class="nav-number">6.1.</span> <span class="nav-text">Tagging</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Branching"><span class="nav-number">6.2.</span> <span class="nav-text">Branching</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Merging"><span class="nav-number">6.3.</span> <span class="nav-text">Merging</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Merge-Conflicts"><span class="nav-number">6.4.</span> <span class="nav-text">Merge Conflicts</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Undoing-Changes"><span class="nav-number">7.</span> <span class="nav-text">Undoing Changes</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Changing-The-Last-Commit"><span class="nav-number">7.1.</span> <span class="nav-text">Changing The Last Commit</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reverting-A-Commit"><span class="nav-number">7.2.</span> <span class="nav-text">Reverting A Commit</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Resetting-Commits"><span class="nav-number">7.3.</span> <span class="nav-text">Resetting Commits</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Reset-vs-Revert"><span class="nav-number">7.3.1.</span> <span class="nav-text">Reset vs Revert</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-git-reset-Command"><span class="nav-number">7.3.2.</span> <span class="nav-text">The git reset Command</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git-Reset’s-Flags"><span class="nav-number">7.3.3.</span> <span class="nav-text">Git Reset’s Flags</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Backup-Branch"><span class="nav-number">7.3.4.</span> <span class="nav-text">Backup Branch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Back-To-Normal"><span class="nav-number">7.3.5.</span> <span class="nav-text">Back To Normal</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+      <!-- hack一个虚线出来 -->
+      <section style="border-top:1px dotted #ccc;height:10px;"></section>
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
+
+
+
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Maybe</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io" rel="external nofollow">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" rel="external nofollow">
+    NexT.Muse
+  </a>
+</div>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count" style="color: #e90f92;">全站共 4.0k 字</span>
+</div>
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  <!-- 
+
+
+
+  
+
+
+
+ -->
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("pwdtmr2hNNBneBp1ylNs73E9-gzGzoHsz", "qngytCWztj8PT1RJyugdoDhV");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script type="text/javascript" async src="//push.zhanzhang.baidu.com/push.js">
+</script>
+
+
+  <!-- 按需加载背景 -->
+  <!-- 识别手机或电脑的js开始 -->  
+  <script type="text/javascript">   
+  (function(){  
+    var res = GetRequest();  
+    var par = res['index'];  
+    if(par!='gfan'){  
+      var ua=navigator.userAgent.toLowerCase();  
+      var contains=function (a, b){  
+          if(a.indexOf(b)!=-1){return true;}  
+      };   
+      if((contains(ua,"android") && contains(ua,"mobile"))||(contains(ua,"android") && contains(ua,"mozilla"))||(contains(ua,"android") && contains(ua,"opera"))||contains(ua,"ucweb7")||contains(ua,"iphone")){
+        return false;
+      } else {
+        $.getScript("/js/src/particle.js");
+      }
+    }  
+  })();  
+  function GetRequest() {  
+    var url = location.search;
+    var theRequest = new Object();  
+    if (url.indexOf("?") != -1) {  
+      var str = url.substr(1);  
+      strs = str.split("&");  
+      for(var i = 0; i < strs.length; i ++) {  
+        theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);  
+      }  
+    }  
+    return theRequest;  
+  }  
+  </script>  
+  <!-- 识别手机或电脑的js结束 -->  
+
+  <!-- 背景动画 -->
+  <!-- <script type="text/javascript" src="/js/src/particle.js"></script> -->
+  <!-- 页面点击小红心 -->
+  <script type="text/javascript" src="/js/src/love.js"></script>
+
+  <script type="text/javascript">var OriginTitile=document.title,st;document.addEventListener("visibilitychange",function(){document.hidden?(document.title="≡[。。]≡ 回不去了吗？!",clearTimeout(st)):(document.title="(ฅ>ω<*ฅ) Thank Vue~ "+OriginTitile,st=setTimeout(function(){document.title=OriginTitile},4e3))})</script>
+</body>
+</html>
