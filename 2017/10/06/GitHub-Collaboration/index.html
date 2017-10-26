@@ -375,7 +375,9 @@
 <a id="more"></a>
 <hr>
 <h1 id="Working-With-Remotes"><a href="#Working-With-Remotes" class="headerlink" title="Working With Remotes"></a>Working With Remotes</h1><h2 id="Add-A-Remote-Repository"><a href="#Add-A-Remote-Repository" class="headerlink" title="Add A Remote Repository"></a>Add A Remote Repository</h2><p>A remote repository is a repository that’s just like the one you’re using but it’s just stored at a different location. To manage a remote repository, use the git remote command:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git remote add &lt;shortname&gt; https://github.com/UserName/RepoName.git</div><div class="line">git remote -v</div></pre></td></tr></table></figure>
+<pre><code class="shell">git remote add &lt;shortname&gt; https://github.com/UserName/RepoName.git
+git remote -v
+</code></pre>
 <ul>
 <li>It’s possible to have links to multiple different remote repositories.</li>
 </ul>
@@ -389,8 +391,10 @@
 <li>git remote -v is used to see the details about a connection to a remote.</li>
 </ul>
 <h2 id="Push-Changes-To-A-Remote"><a href="#Push-Changes-To-A-Remote" class="headerlink" title="Push Changes To A Remote"></a>Push Changes To A Remote</h2><h3 id="Sending-Commits"><a href="#Sending-Commits" class="headerlink" title="Sending Commits"></a>Sending Commits</h3><p>To send local commits to a remote repository you need to use the <code>git push</code> command. You provide the remote short name and then you supply the name of the branch that contains the commits you want to push:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git push &lt;remote-shortname&gt; &lt;local-branch&gt;:&lt;remote-branch&gt;</div></pre></td></tr></table></figure>
-<h2 id="Pull-Changes-From-A-Remote"><a href="#Pull-Changes-From-A-Remote" class="headerlink" title="Pull Changes From A Remote"></a>Pull Changes From A Remote</h2><h3 id="Pulling-Changes-with-git-pull"><a href="#Pulling-Changes-with-git-pull" class="headerlink" title="Pulling Changes with git pull"></a>Pulling Changes with <code>git pull</code></h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git pull &lt;remote-shortname&gt; &lt;remote-branch&gt;</div></pre></td></tr></table></figure>
+<pre><code class="shell">git push &lt;remote-shortname&gt; &lt;local-branch&gt;:&lt;remote-branch&gt;
+</code></pre>
+<h2 id="Pull-Changes-From-A-Remote"><a href="#Pull-Changes-From-A-Remote" class="headerlink" title="Pull Changes From A Remote"></a>Pull Changes From A Remote</h2><h3 id="Pulling-Changes-with-git-pull"><a href="#Pulling-Changes-with-git-pull" class="headerlink" title="Pulling Changes with git pull"></a>Pulling Changes with <code>git pull</code></h3><pre><code class="shell">git pull &lt;remote-shortname&gt; &lt;remote-branch&gt;
+</code></pre>
 <p>When git pull is run, the following things happen:</p>
 <ul>
 <li>the commit(s) on the remote branch are copied to the local repository</li>
@@ -403,11 +407,20 @@
 </ul>
 <p>Also, changes can be manually added on GitHub (but this is not recommended, so don’t do it). </p>
 <p>###Pull vs Fetch</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git pull origin master</div></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git fetch origin master</div><div class="line">git merge origin/master</div></pre></td></tr></table></figure>
+<pre><code class="shell">git pull origin master
+</code></pre>
+<pre><code class="shell">git fetch origin master
+git merge origin/master
+</code></pre>
 <hr>
 <h1 id="Working-On-another-Developer’s-Repository"><a href="#Working-On-another-Developer’s-Repository" class="headerlink" title="Working On another Developer’s Repository"></a>Working On another Developer’s Repository</h1><h2 id="Fork-A-Repository"><a href="#Fork-A-Repository" class="headerlink" title="Fork A Repository"></a>Fork A Repository</h2><p>Forking is an action that’s done on a hosting service, like GitHub. Forking a repository creates an <code>identical copy</code> of the original repository and moves this copy to your account. You have total control over this forked repository. Modifying your forked repository does not alter the original repository in any way.</p>
-<h2 id="Reviewing-Existing-Work"><a href="#Reviewing-Existing-Work" class="headerlink" title="Reviewing Existing Work"></a>Reviewing Existing Work</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">git shortlog</div><div class="line">git shortlog -s -n</div><div class="line">git shortlog --author=Surma</div><div class="line">git shortlog --author="Wang Mei"</div><div class="line">git show 5966b66</div><div class="line">git log --grep=bug</div></pre></td></tr></table></figure>
+<h2 id="Reviewing-Existing-Work"><a href="#Reviewing-Existing-Work" class="headerlink" title="Reviewing Existing Work"></a>Reviewing Existing Work</h2><pre><code class="shell">git shortlog
+git shortlog -s -n
+git shortlog --author=Surma
+git shortlog --author=&quot;Wang Mei&quot;
+git show 5966b66
+git log --grep=bug
+</code></pre>
 <p><a href="https://classroom.udacity.com/courses/ud456/lessons/5e203cba-a6a7-4f9f-8a72-65ea05b1f74b/concepts/5764b331-ef76-44f5-b627-a917fa97d870" target="_blank" rel="external">Further Research</a></p>
 <h2 id="Determining-what-To-Work-On"><a href="#Determining-what-To-Work-On" class="headerlink" title="Determining what To Work On"></a>Determining what To Work On</h2><ul>
 <li>Before you start doing any work, make sure to look for the project’s CONTRIBUTING.md file.</li>
@@ -446,17 +459,27 @@
 <ul>
 <li>create a new pull request and choose the branch that has your new commits</li>
 </ul>
-<h2 id="Stay-in-sync-with-source-project"><a href="#Stay-in-sync-with-source-project" class="headerlink" title="Stay in sync with source project"></a>Stay in sync with source project</h2><h3 id="Stars-amp-Watching"><a href="#Stars-amp-Watching" class="headerlink" title="Stars &amp; Watching"></a>Stars &amp; Watching</h3><h3 id="Including-Upstream-Changes"><a href="#Including-Upstream-Changes" class="headerlink" title="Including Upstream Changes"></a>Including Upstream Changes</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git remote add upstream https://github.com/udacity/course-collaboration-travel-plans.git</div></pre></td></tr></table></figure>
+<h2 id="Stay-in-sync-with-source-project"><a href="#Stay-in-sync-with-source-project" class="headerlink" title="Stay in sync with source project"></a>Stay in sync with source project</h2><h3 id="Stars-amp-Watching"><a href="#Stars-amp-Watching" class="headerlink" title="Stars &amp; Watching"></a>Stars &amp; Watching</h3><h3 id="Including-Upstream-Changes"><a href="#Including-Upstream-Changes" class="headerlink" title="Including Upstream Changes"></a>Including Upstream Changes</h3><pre><code class="shell">git remote add upstream https://github.com/udacity/course-collaboration-travel-plans.git
+</code></pre>
 <h3 id="Origin-vs-Upstream-Clarification"><a href="#Origin-vs-Upstream-Clarification" class="headerlink" title="Origin vs Upstream Clarification"></a>Origin vs Upstream Clarification</h3><p>One thing that can be a tiny bit confusing right now is the difference between the origin and upstream. What might be confusing is that origin does not refer to the source repository (also known as the “original” repository) that we forked from. Instead, it’s pointing to our forked repository. So even though it has the word origin is not actually the original repository.</p>
 <p>We can also rename repo.</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git remote rename origin mine</div><div class="line">fit remote rename upstream source-repo</div></pre></td></tr></table></figure>
-<h3 id="Pulling-Upstream-Changes"><a href="#Pulling-Upstream-Changes" class="headerlink" title="Pulling Upstream Changes"></a>Pulling Upstream Changes</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git pull upstream master</div></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">git fetch upstream master</div><div class="line">git checkout master</div><div class="line">git merge upstream/master</div><div class="line">git push origin master</div></pre></td></tr></table></figure>
+<pre><code class="shell">git remote rename origin mine
+fit remote rename upstream source-repo
+</code></pre>
+<h3 id="Pulling-Upstream-Changes"><a href="#Pulling-Upstream-Changes" class="headerlink" title="Pulling Upstream Changes"></a>Pulling Upstream Changes</h3><pre><code class="shell">git pull upstream master
+</code></pre>
+<pre><code class="shell">git fetch upstream master
+git checkout master
+git merge upstream/master
+git push origin master
+</code></pre>
 <h2 id="Squash-Commits"><a href="#Squash-Commits" class="headerlink" title="Squash Commits"></a>Squash Commits</h2><p>###The Rebase Command<br>The <code>git rebase</code> command will move commits to have a new base. In the command git rebase -i HEAD~3, we’re telling Git to use HEAD~3 as the base where all of the other commits (HEAD~2, HEAD~1, and HEAD) will connect to.<br>The <code>-i</code> in the command stands for <code>&quot;interactive&quot;</code>. You can perform a rebase in a non-interactive mode. While you’re learning how to rebase, though, I definitely recommend that you do interactive rebasing.</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git rebase -i HEAD~3</div></pre></td></tr></table></figure>
+<pre><code class="shell">git rebase -i HEAD~3
+</code></pre>
 <h3 id="Ancestry-References"><a href="#Ancestry-References" class="headerlink" title="Ancestry References"></a>Ancestry References</h3><p>As a brief refresher, <code>HEAD</code> indicates your current location (it could point to several things, but typically it’ll either point to a branch name or directly to a commit’s <code>SHA</code>). The <code>~3</code> part means “three before”, so <code>HEAD~3</code> will be the commit that’s three before the one you’re currently on. We’re using this relative reference to a commit in the <code>git rebase</code> command.</p>
 <h3 id="Force-Pushing"><a href="#Force-Pushing" class="headerlink" title="Force Pushing"></a>Force Pushing</h3><p>if you try to push commits and GitHub rejects them, it’s trying to help you, so make sure to review what commits you’re pushing and the commits that are on GitHub to verify you’re not about to overwrite content on your remote repository accidentally!</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git push -f origin master</div></pre></td></tr></table></figure>
+<pre><code class="SHE">git push -f origin master
+</code></pre>
 <h3 id="Rebase-Commands"><a href="#Rebase-Commands" class="headerlink" title="Rebase Commands"></a>Rebase Commands</h3><p>Let’s take another look at the different commands that you can do with <code>git rebase</code>:</p>
 <ul>
 <li>use <code>p</code> or <code>pick</code> – to keep the commit as is</li>
